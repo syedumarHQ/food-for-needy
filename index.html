@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food for Needy</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+
+<header>
+    <h1>Food for Needy</h1>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#donate-food">Donate Food</a></li>
+            <li><a href="#request-food">Request Food</a></li>
+            
+        </ul>
+    </nav>
+</header>
+
+<section id="home">
+    <h2>Welcome to the Food Donation Website</h2>
+    <p>We help distribute leftover food to the needy.</p>
+</section>
+
+<section id="about">
+    <h2>About Us</h2>
+    <p>We are a group of volunteers ensuring that no food goes to waste.</p>
+</section>
+
+<section id="donate-food">
+    <h2>Donate Food</h2>
+    <form onsubmit="event.preventDefault(); addFood();">
+        <label for="food-item">Food Item:</label>
+        <input type="text" id="food-item" required><br>
+        
+        <label for="location">Location:</label>
+        <input type="text" id="location" required><br>
+        
+        <label for="quantity">Quantity:</label>
+        <input type="text" id="quantity" required><br>
+        
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" required><br>
+        
+        <button type="submit">Donate Food</button>
+    </form>
+
+    <h3>Available Food Donations</h3>
+    <ul id="food-list-content"></ul>
+    <button onclick="clearFoodList()">Clear All Donations</button>
+</section>
+
+<section id="request-food">
+    <h2>Request Food</h2>
+    <form onsubmit="event.preventDefault(); requestFood();">
+        <label for="request-item">Food Item:</label>
+        <input type="text" id="request-item" required><br>
+        
+        <label for="request-location">Location:</label>
+        <input type="text" id="request-location" required><br>
+        
+        <label for="request-phone">Phone Number:</label>
+        <input type="tel" id="request-phone" required><br>
+        
+        <button type="submit">Request Food</button>
+    </form>
+
+    <h3>Food Requests</h3>
+    <ul id="food-request-list"></ul>
+    <button onclick="clearFoodRequests()">Clear All Requests</button>
+</section>
+
+</body>
+</html>
